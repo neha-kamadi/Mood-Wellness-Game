@@ -1,0 +1,143 @@
+{% load static %}
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MoodMate - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'moodapp/css/style.css' %}">
+</head>
+<body class="text-center bg-light">
+  <div class="container mt-5">
+    <h1 class="text-primary fw-bold mb-3">‍ MoodMate</h1>
+    <p class="lead">Discover your mood and find your happy balance</p>
+    <form action="{% url 'moodapp:quiz'%}" method="POST">
+      {% csrf_token %}
+      <div class="mb-3">
+        <input type="text" name="name" class="form-control w-50 mx-auto" placeholder="Enter your name" required>
+      </div>
+      <button class="btn btn-primary btn-lg">Start Mood Quiz</button>
+    </form>
+  </div>
+</body>
+</html>-->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MoodMate – Find Your Inner Calm</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, #c2e9fb, #e2f0cb);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .main-box {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 600px;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      h1 {
+        font-weight: 700;
+        color: #007bff;
+        margin-bottom: 15px;
+      }
+
+      p.lead {
+        color: #444;
+        font-size: 1.1rem;
+      }
+
+      .btn-primary {
+        border-radius: 25px;
+        padding: 10px 25px;
+        transition: 0.3s;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+
+      .thoughts {
+        margin-top: 30px;
+        font-style: italic;
+        color: #2f4f4f;
+        font-size: 1rem;
+      }
+
+      footer {
+        margin-top: 40px;
+        color: #555;
+        font-size: 0.9rem;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-box">
+      <h1>🧘‍♀ MoodMate</h1>
+      <p class="lead">
+        Discover your current mood, uplift your spirit, and find your happy
+        balance
+      </p>
+
+      <form action="{% url 'moodapp:quiz' %}" method="POST" class="mt-4">
+        {% csrf_token %}
+        <div class="mb-3">
+          <input
+            type="text"
+            name="name"
+            class="form-control text-center"
+            placeholder="Enter your name to begin"
+            required
+          />
+        </div>
+        <button class="btn btn-primary btn-lg">Start Mood Quiz</button>
+      </form>
+
+      <div class="thoughts mt-4">
+        🌟 “Your mood is a reflection of your thoughts. Calm your mind, and your
+        world becomes peaceful.” <br />
+        ☀ “Happiness is not something ready-made. It comes from your own
+        actions.” – Dalai Lama
+      </div>
+    </div>
+
+    <footer class="text-center">
+      <p>© 2025 MoodMate | Built with 💙 using Django & Bootstrap</p>
+    </footer>
+  </body>
+</html>
