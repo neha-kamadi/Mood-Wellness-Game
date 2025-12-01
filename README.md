@@ -1,9 +1,3 @@
-Perfect, Neha 🌸 — now that your MoodMate Django Project is complete and visually beautiful, you can showcase it confidently on GitHub.
-
-Here’s a professional GitHub summary (README.md) you can copy directly into your repository — it’s written in a clean, recruiter-friendly format.
-
-
----
 
 🧘‍♀ MoodMate: AI-Powered Mood & Wellness Web App
 
